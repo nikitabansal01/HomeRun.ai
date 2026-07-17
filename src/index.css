@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #060709;
+  color: #E7E9EE;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(139, 92, 246, 0.4);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0B10;
+}
+::-webkit-scrollbar-thumb {
+  background: #1B1E29;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2A2E3D;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* glass panel primitive */
+.panel {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 1rem;
+  backdrop-filter: blur(12px);
+}
+
+/* gradient text */
+.grad-text {
+  background: linear-gradient(100deg, #A78BFA 0%, #22D3EE 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* hairline gradient border card */
+.grad-border {
+  position: relative;
+  background: linear-gradient(#0E1015, #0E1015) padding-box,
+    linear-gradient(135deg, rgba(139, 92, 246, 0.5), rgba(34, 211, 238, 0.3), rgba(255, 255, 255, 0.06)) border-box;
+  border: 1px solid transparent;
+}
