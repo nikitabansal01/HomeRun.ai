@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+import { ArrowLeft } from 'lucide-react'
 import TopBar from '../components/dashboard/TopBar'
 import VoiceReminders from '../components/dashboard/VoiceReminders'
 import PeopleTabs from '../components/dashboard/PeopleTabs'
@@ -13,6 +15,13 @@ export default function Dashboard() {
       <TopBar />
 
       <main className="relative mx-auto max-w-6xl space-y-10 px-6 pt-8">
+        <Link
+          to="/app"
+          className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-500 transition hover:text-white"
+        >
+          <ArrowLeft size={15} /> Back to today's briefing
+        </Link>
+
         <VoiceReminders />
 
         <div>

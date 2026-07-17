@@ -137,6 +137,77 @@ export const friends = [
   },
 ]
 
+// ————— Shared briefing: the couple's daily home surface —————
+// Framed for two partners. Ownership is for coordination, never a scoreboard.
+export const briefing = {
+  viewer: { id: 'fm-1', name: 'Dani', initials: 'DR', color: 'cat4' },
+  partner: { id: 'fm-2', name: 'Sam', initials: 'SO', color: 'cat1' },
+  date: 'Thursday, July 16',
+  handled: {
+    count: 9,
+    detail: '2 bills on autopay · calendars synced · groceries queued · movie picked',
+  },
+  today: [
+    {
+      id: 't-1',
+      kind: 'call',
+      title: 'Call the electrician about the panel',
+      meta: 'before 5:00 PM',
+      owner: 'sam',
+      why: 'Dani asked last night — you delegated this in your voice',
+      fromVoice: true,
+    },
+    {
+      id: 't-2',
+      kind: 'form',
+      title: "Sign Maya's field-trip form",
+      meta: 'due Friday',
+      owner: 'you',
+      why: 'From the Oakview school portal + Maya',
+    },
+    {
+      id: 't-3',
+      kind: 'bill',
+      title: 'Pay the Amex — overdue 5 days',
+      meta: '$312.50',
+      owner: 'you',
+      why: 'From the Family Finances sheet · this card isn\'t on autopay',
+    },
+  ],
+  comingUp: [
+    {
+      id: 'c-1',
+      kind: 'grocery',
+      title: 'Milk & eggs run out around Thursday',
+      why: "From the Jul 12 receipt · Thursday's dinner needs eggs",
+      action: 'Add to Instacart',
+    },
+    {
+      id: 'c-2',
+      kind: 'warm',
+      title: 'Miguel has been quiet for six weeks',
+      why: 'Last call May 30 · his birthday is Sep 3',
+      action: 'Plan a call',
+      warm: true,
+    },
+    {
+      id: 'c-3',
+      kind: 'plan',
+      title: 'Dinner with the Chens — Saturday',
+      why: "Their turn to host · you offered to bring dessert",
+      action: 'Add reminder',
+    },
+  ],
+  // The occasional, gentle labor-balance check-in. Team framing, no numbers shown.
+  balance: {
+    message: "You've been carrying a lot, Dani.",
+    detail:
+      "You've owned most of this week's plans — the finances, the school stuff, the groceries. Sam's got room this week. Want to pass a few things his way?",
+    lean: 0.72, // Dani's share of the week's load; rendered as a soft tilt, never a percentage
+    reassurance: 'We balance the load — we don\'t keep score.',
+  },
+}
+
 // ————— Voice reminders: first-person messages, delivered in the sender's cloned voice —————
 export const voiceReminders = [
   {
